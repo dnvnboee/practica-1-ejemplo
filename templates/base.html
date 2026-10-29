@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo-1.css') }}">
+    <title>Biblioteca Virtual - Tu Portal de Lectura</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Biblioteca Digital</h1>
+        </div>
+        <nav aria-label="Navegacion Principal">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="catalogo">Catalogo</a></li>
+                <li><a href="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-area">
+            <div class="header">
+                {% block header%} {% endblock %}
+            </div>
+
+            {% block content %} {% endblock %}
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Biblioteca Virtual</p>
+        <address>
+            Contacto <a href="#">info@bibliotecadigital.org</a>
+        </address>
+    </footer>
+</body>
+</html>

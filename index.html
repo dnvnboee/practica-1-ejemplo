@@ -1,0 +1,18 @@
+{% extends('base.html') %}
+
+{% block header %}
+    <h1>Inicio</h1>
+{% endblock %}
+
+{% block content %}
+<section class="hero" id="inicio">
+    <h2>Explora miles de libros en línea</h2>
+    <p>Accede de forma gratuita a nuestra colección de literatura, ciencia, historia y tecnología desde cualquier dispositivo.</p>
+
+    <form action="/buscar" method="GET">
+        <label for="search">Buscar libro o autor:</label>
+        <input type="search" id="search" name="q" placeholder="Ej. Cien años de soledad...">
+        <button type="submit">Buscar</button>
+    </form>
+</section>
+{% endblock %}
